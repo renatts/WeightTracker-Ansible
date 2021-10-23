@@ -11,7 +11,7 @@
 
 ---
 
-Week 6 image !!!
+![week-6-envs](https://user-images.githubusercontent.com/83014719/138560843-a874c1e8-f789-44f9-8140-42bc55e22d6d.png)
 # Node.js Weight Tracker
 
 ![build-weight-tracker-app-demo](https://user-images.githubusercontent.com/83014719/137505630-ccf4c3f4-6e06-4778-b414-830d6bb23f99.gif)
@@ -40,3 +40,4 @@ This sample application demonstrates the following technologies.
 1. Copy `.env.sample` to `.env` and change the `OKTA_*` values to your application
 1. Initialize the PostgreSQL database by running `npm run initdb`
 1. Run `npm run dev` to start Node.js
+

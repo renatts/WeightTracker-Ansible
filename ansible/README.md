@@ -5,8 +5,9 @@
 * [Download and install](https://linuxhint.com/begineers_guide_tutorial_ansible/) `ansible` on your linux virtual machine (controller).
 * Create ssh key with `ssh-keygen` command.
 * Copy the key to the agents by using `ssh-copy-id <path-to-file> user@hostname` command.
-* On `.env` creating use variables file for your  `OKTA`, `PostgreSQL`, `Hosts` and other sensitive data.
-* Encrypt the variables file by using Ansible vault.
+* On `.env` creating use variables file for your  `OKTA`,  `PostgreSQL`,  `Hosts`  and other sensitive data.
+* Encrypt the variables file by using Ansible vault `sudo ansible-vault encrypt variables.yml` (example).
+* To use `ipify_facts` install: `ansible-galaxy collection install community.general`
 * Run playbook with `sudo ansible-playbook -i ./inventory playbook.yml` command (while your variables file is decrypted).
 
 ---

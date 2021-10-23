@@ -1,11 +1,11 @@
-#  <img src="https://img.shields.io/static/v1?label=&message=Ansible&color=black" width="110" height="35"/>  Configuration Management (Node Weight Tracker) Staging and Production Environments
+#  <img src="https://img.shields.io/static/v1?label=&message=Ansible&color=black" width="100" height="35"/>  Configuration Management (Node Weight Tracker) Staging and Production Environments
 
 ### Install Ansible
 * Run `sudo apt update` and `sudo apt upgrade`
 * [Download and install](https://linuxhint.com/begineers_guide_tutorial_ansible/) `ansible` on your linux virtual machine (controller).
 * Create ssh key with `ssh-keygen` command.
 * Copy the key to the agents by using `ssh-copy-id <path-to-file> user@hostname` command.
-* On `.env`creating use variables file for your  `OKTA`, `PostgreSQL`, `Hosts` and other sensitive data.
+* On `.env` creating use variables file for your  `OKTA`, `PostgreSQL`, `Hosts` and other sensitive data.
 * Encrypt the variables file by using Ansible vault.
 * Run playbook with `sudo ansible-playbook -i ./inventory playbook.yml --vault-password-file encrypted_password.yml` command.
 

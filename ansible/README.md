@@ -7,7 +7,7 @@
 * Copy the key to the agents by using `ssh-copy-id <path-to-file> user@hostname` command.
 * On `.env` creating use variables file for your  `OKTA`, `PostgreSQL`, `Hosts` and other sensitive data.
 * Encrypt the variables file by using Ansible vault.
-* Run playbook with `sudo ansible-playbook -i ./inventory playbook.yml --vault-password-file encrypted_password.yml` command.
+* Run playbook with `sudo ansible-playbook -i ./inventory playbook.yml` command (while your variables file is decrypted).
 
 ---
 

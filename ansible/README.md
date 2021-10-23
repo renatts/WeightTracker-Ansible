@@ -1,17 +1,18 @@
-#  <img src="https://img.shields.io/static/v1?label=&message=Ansible&color=black" width="110" height="35"/>  Configuration Management (Node Weight Tracker) Staging and Production Environments
+#  <img src="https://img.shields.io/static/v1?label=&message=Ansible&color=black" width="100" height="35"/>  Configuration Management (Node Weight Tracker) Staging and Production Environments
 
 ### Install Ansible
 * Run `sudo apt update` and `sudo apt upgrade`
 * [Download and install](https://linuxhint.com/begineers_guide_tutorial_ansible/) `ansible` on your linux virtual machine (controller).
 * Create ssh key with `ssh-keygen` command.
 * Copy the key to the agents by using `ssh-copy-id <path-to-file> user@hostname` command.
-* On `.env`creating use variables file for your  `OKTA`, `PostgreSQL`, `Hosts` and other sensitive data.
-* Encrypt the variables file by using Ansible vault.
-* Run playbook with `sudo ansible-playbook -i ./inventory playbook.yml --vault-password-file encrypted_password.yml` command.
+* On `.env` creating use variables file for your  `OKTA`,  `PostgreSQL`,  `Hosts`  and other sensitive data.
+* Encrypt the variables file by using Ansible vault `sudo ansible-vault encrypt variables.yml` (example).
+* To use `ipify_facts` install: `ansible-galaxy collection install community.general`
+* Run playbook with `sudo ansible-playbook -i ./inventory playbook.yml` command (while your variables file is decrypted).
 
 ---
 
-Week 6 image !!!
+![week-6-envs](https://user-images.githubusercontent.com/83014719/138560843-a874c1e8-f789-44f9-8140-42bc55e22d6d.png)
 # Node.js Weight Tracker
 
 ![build-weight-tracker-app-demo](https://user-images.githubusercontent.com/83014719/137505630-ccf4c3f4-6e06-4778-b414-830d6bb23f99.gif)
@@ -40,3 +41,4 @@ This sample application demonstrates the following technologies.
 1. Copy `.env.sample` to `.env` and change the `OKTA_*` values to your application
 1. Initialize the PostgreSQL database by running `npm run initdb`
 1. Run `npm run dev` to start Node.js
+
